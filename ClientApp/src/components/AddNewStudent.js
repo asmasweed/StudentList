@@ -19,7 +19,7 @@ var AddStudent = /** @class */ (function (_super) {
     __extends(AddStudent, _super);
     function AddStudent(props) {
         var _this = _super.call(this, props) || this;
-        _this.state = { title: "", loading: true, studentList: new StudentList_1.StudentListData };
+        _this.state = { title: "", loading: true, studentList: new StudentList_1.StudentListData() };
         //the studentid variable will get the student id from URL.
         var studentid = _this.props.match.params["studentid"];
         //if studentid is greater than 0 then fetch method will get the specific student record and display it as in edit mode.
@@ -31,7 +31,7 @@ var AddStudent = /** @class */ (function (_super) {
             });
         }
         else {
-            _this.state = { title: "Create", loading: false, studentList: new StudentList_1.StudentListData };
+            _this.state = { title: "Create", loading: false, studentList: new StudentList_1.StudentListData() };
         }
         _this.FuncSave = _this.FuncSave.bind(_this);
         _this.FuncCancel = _this.FuncCancel.bind(_this);

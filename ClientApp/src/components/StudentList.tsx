@@ -22,7 +22,7 @@ export class StudentList extends React.Component<RouteComponentProps<any, any>, 
         fetch('api/Student/Index')
             .then(response => response.json() as Promise<StudentListData[]>)
             .then(data => {
-                debugger
+                //debugger
                 this.setState({ studentListData: data, loading: false });
             });
         

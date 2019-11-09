@@ -20,7 +20,6 @@ namespace Student.Models
         public int CreateStudent(Students student)
         {
             db.Add(student);
-            db.Update(student);
             db.SaveChanges();
             return 1;
 

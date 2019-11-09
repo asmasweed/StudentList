@@ -1,4 +1,4 @@
-//"use strict";
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -25,7 +25,7 @@ var StudentList = /** @class */ (function (_super) {
         fetch('api/Student/Index')
             .then(function (response) { return response.json(); })
             .then(function (data) {
-            //debugger;
+            //debugger
             _this.setState({ studentListData: data, loading: false });
         });
         _this.FuncDelete = _this.FuncDelete.bind(_this);

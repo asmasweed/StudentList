@@ -34,7 +34,7 @@ namespace Student.Models
             {
                 entity.HasKey(e => e.StudentId);
 
-                entity.Property(e => e.StudentId).ValueGeneratedNever();
+                entity.Property(e => e.StudentId).ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Address).HasMaxLength(200);
 

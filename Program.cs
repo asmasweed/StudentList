@@ -19,6 +19,10 @@ namespace Student
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseKestrel(cfg =>
+                {
+                    cfg.ListenLocalhost(3000);
+                })
                 .UseStartup<Startup>();
     }
 }
